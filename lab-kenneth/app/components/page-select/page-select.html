@@ -1,0 +1,12 @@
+<div class="page-select">
+  <ul>
+    <li
+      ng-repeat="item in $ctrl.pages track by $index"
+      ng-show="$ctrl.showAll || $ctrl.selected == item"
+      ng-click="$ctrl.handleSelect(item)">
+
+        {{item.title}}
+    </li>
+  <ul>
+
+</div>

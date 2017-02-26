@@ -2,9 +2,10 @@
 
 const angular = require('angular');
 const uiRouter = require('angular-ui-router');
+const ngMarked = require('angular-marked');
 
 
-angular.module('kenblog', [uiRouter])
+angular.module('kenblog', [uiRouter, ngMarked])
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
   $urlRouterProvider.when('','/auth');
   let routes = [
@@ -16,13 +17,21 @@ angular.module('kenblog', [uiRouter])
     {
       name: 'dashboard',
       url:'/dashboard',
-      template:'<h1> this is the dashboard </h1>',
+      template:'<dashboard></dashboard>',
     },
   ];
   routes.forEach(route => $stateProvider.state(route));
 
 }]);
 
+require('./service/page-service.js');
 require('./service/auth-service.js');
-require('./containers/auth-container.js');
+
+
+require('./containers/auth/auth-container.js');
+require('./containers/dashboard/index.js');
+
+
 require('./components/login');
+require('./components/page-select');
+require('./components/page-editor');
