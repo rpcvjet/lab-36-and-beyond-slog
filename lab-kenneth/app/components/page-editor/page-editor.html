@@ -1,17 +1,22 @@
 <div class="page-editor">
-<form novalidate ng-submit="$ctrl.handleSubmit($ctrl.page)">
+<form novalidate
+      ng-submit="$ctrl.handleSubmit($ctrl.page)">
 
   <textarea
-  ng-model="$ctrl.page.title"
- placeholder="put stuff here"
-  ></textarea>
+      ng-model="$ctrl.page.title"
+      placeholder="put stuff here">
+  </textarea>
 
-<input type="checkbox"
- ng-model="$ctrl.page.showInNav" id="show-in-nav-checkbox">
+  <input
+      type="checkbox"
+      ng-model="$ctrl.page.showInNav"
+      id="show-in-nav-checkbox">
 
-<label for="show-in-nav-checkbox"> show in nav</label>
+  <label for="show-in-nav-checkbox">
+    show in nav
+  </label>
 
-<button> Submit </button>
+  <button> Submit </button>
 
 </form>
 </div>

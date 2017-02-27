@@ -9,7 +9,7 @@ function createPageService($log, $http, authService) {
   pageService.create = (page) => {
     return authService.tokenFetch()
     .then( token => {
-      let url = `${__API_URL__}/api/login`;
+      let url = `${__API_URL__}/api/page`;
       let config = {
         headers: {
           Authorization: `Bearer ${token}`,

@@ -1,7 +1,5 @@
   <div class="dashboard">
 
-  <button ng-click="$ctrl.handlePageNew()"> NEW </button>
-  <button ng-click="$ctrl.handlePageDelete($ctrl.pageSelectSelected)"> DEL </button>
 
   <h1>hey yall</h1>
 
@@ -9,9 +7,11 @@
   pages="$ctrl.pageSelectPages"
   show-all="$ctrl.pageSelectShowAll"
   selected="$ctrl.pageSelectSelected"
-  handle-select="$ctrl.pageSelectHandleSelect"
+  handle-select="$ctrl.pageSelectHandleSelect">
 </page-select>
 
+<button ng-click="$ctrl.handlePageNew()"> NEW </button>
+<button ng-click="$ctrl.handlePageDelete($ctrl.pageSelectSelected)"> DEL </button>
 
 <div marked="$ctrl.pageEditorPage.content">
   </div>

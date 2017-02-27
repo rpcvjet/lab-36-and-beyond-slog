@@ -20,6 +20,7 @@ require('angular').module('kenblog')
       this.pageEditorHandleSubmit = (page) => {
         pageService.create(page)
         .then(page => {
+          $log.log('just made a page', page)
           this.pageSelectPages.push(page);
           this.pageEditorPage = {title: '', content: '', showInNav: false};
         })

@@ -16,7 +16,10 @@ const Page = module.exports = function(opts){
 Page.fetchAll = function(){
   return firebase.database().ref('/pages').once('value')
   .then(snapShot => {
-    let data=snapShot.val();
+    console.log('snapshot.val=========>',snapShot.val()); //null
+    let data = snapShot.val();
+    console.log('data==========>',data);  //null
+    console.log('this is the fetch all');
     let pages = Object.keys(data).map(key => data[key]);
     return pages;
 

@@ -6,7 +6,8 @@ const ngMarked = require('angular-marked');
 
 
 angular.module('kenblog', [uiRouter, ngMarked])
-.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+.config(['$qProvider','$stateProvider', '$urlRouterProvider', function($qProvider,$stateProvider, $urlRouterProvider){
+  $qProvider.errorOnUnhandledRejections(false);
   $urlRouterProvider.when('','/auth');
   let routes = [
     {

@@ -25,7 +25,6 @@ function authService($log, $q, $window, $http) {
       return $q.resolve(authToken);
 
     try {
-      console.log(authToken);
       authToken = JSON.parse($window.localStorage.token);
       return $q.resolve(authToken);
     } catch(err) {
