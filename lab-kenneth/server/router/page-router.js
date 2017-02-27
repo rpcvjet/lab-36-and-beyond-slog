@@ -9,6 +9,8 @@ const bearerAuth = require('../lib/bearer-auth.js');
 const pageRouter = module.exports = new Router();
 
 pageRouter.put('/api/page', bearerAuth, jsonParser, (req, res,next)=>{
+  console.log('i am in the page router');
+  console.log('req.body=============>',req.body);
   new Page(req.body).save()
   .then(page => res.json(page))
   .catch(next);

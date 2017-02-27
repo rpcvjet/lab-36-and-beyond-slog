@@ -17,7 +17,7 @@ function createPageService($log, $http, authService) {
         },
       };
       page.showInNav = !!page.showInNav;
-      return $http.put (url, page, config);
+      return $http.put(url, page, config);
     })
     .then(res => res.data);
   };
@@ -29,6 +29,7 @@ function createPageService($log, $http, authService) {
         Accept: 'application/json',
       },
     };
+    console.log('I am in the fetchAll function');
     return $http.get(url, config)
     .then(res => res.data);
   };

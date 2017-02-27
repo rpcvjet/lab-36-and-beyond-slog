@@ -10,7 +10,7 @@ const Page = module.exports = function(opts){
   this.id = opts.id || uuid.v1();
   this.title = opts.title;
   this.content = opts.content;
-  this.showinNav = opts.showinNav;
+  this.showInNav = opts.showInNav;
 };
 
 Page.fetchAll = function(){
@@ -38,7 +38,7 @@ Page.findIdAndDelete = function(id){
 
 
 Page.prototype.validate = function(){
-  if(!this.title || !this.content || !this.showinNav)
+  if(!this.title || !this.content)
     return Promise.reject(createError(400, 'missing a required property'));
   return Promise.resolve();
 };

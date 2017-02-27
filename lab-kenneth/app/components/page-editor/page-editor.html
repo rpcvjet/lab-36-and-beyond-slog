@@ -2,9 +2,15 @@
 <form novalidate
       ng-submit="$ctrl.handleSubmit($ctrl.page)">
 
+      <textarea
+          ng-model="$ctrl.page.content"
+          placeholder="this is the content area">
+      </textarea>
+
+
   <textarea
       ng-model="$ctrl.page.title"
-      placeholder="put stuff here">
+      placeholder="title">
   </textarea>
 
   <input
