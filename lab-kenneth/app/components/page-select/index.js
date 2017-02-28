@@ -1,4 +1,5 @@
 'use strict';
+require('./_page-select.scss');
 
 require('angular').module('kenblog')
 .component('pageSelect', {

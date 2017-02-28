@@ -3,7 +3,7 @@
 require('angular').module('kenblog')
 .component('dashboard', {
   template: require('./dashboard.html'),
-  controller: ['$log', 'pageService', function($log, pageService){
+  controller: ['$log','clipboard', 'pageService', function($log, clipboard, pageService){
     this.$onInit =()=>{
       this.pageSelectPages = [];
       this.pageSelectShowAll = false;
@@ -29,6 +29,10 @@ require('angular').module('kenblog')
 
       this.handlePageNew = () =>{
         this.pageEditorPage = {title: '', content: '', showInNav: false};
+      };
+
+      this.handlePageCopy = (page) => {
+        clipboard.copyText(`[](/#!/page/${page.id})`);
       };
 
       this.handlePageDelete = (page) => {

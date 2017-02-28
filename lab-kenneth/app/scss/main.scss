@@ -1,0 +1,10 @@
+// get vars
+@import "theme";
+
+// get mixins
+@import "reset";
+@import "base";
+
+// run mixins
+@include reset;
+@include base;

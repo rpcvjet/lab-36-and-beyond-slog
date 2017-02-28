@@ -1,11 +1,15 @@
 'use strict';
+require('./scss/main.scss');
 
 const angular = require('angular');
 const uiRouter = require('angular-ui-router');
 const ngMarked = require('angular-marked');
+const ngClipboard = require('angular-clipboard');
+const ngAnimate = require('angular-animate');
+const ngTouch = require('angular-touch');
 
 
-angular.module('kenblog', [uiRouter, ngMarked])
+angular.module('kenblog', [uiRouter, ngMarked, ngClipboard.name, 'ngTouch', 'ngAnimate'])
 .config(['$qProvider','$stateProvider', '$urlRouterProvider', function($qProvider,$stateProvider, $urlRouterProvider){
   $qProvider.errorOnUnhandledRejections(false);
   $urlRouterProvider.when('','/auth');

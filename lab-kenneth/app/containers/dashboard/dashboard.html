@@ -10,11 +10,12 @@
   handle-select="$ctrl.pageSelectHandleSelect">
 </page-select>
 
-<button ng-click="$ctrl.handlePageNew()"> NEW </button>
-<button ng-click="$ctrl.handlePageDelete($ctrl.pageSelectSelected)"> DEL </button>
 
-<div marked="$ctrl.pageEditorPage.content">
-  </div>
+<div class="dashboard-btns">
+  <button ng-click="$ctrl.handlePageNew()"> NEW </button>
+  <button ng-click="$ctrl.handlePageDelete($ctrl.pageSelectSelected)"> DEL </button>
+  <button ng-click="$ctrl.handlePageCopy($ctrl.pageSelectSelected)">COPY LINK</button>
+</div>
 
     <page-editor  //toggle function here
     page="$ctrl.pageEditorPage"

@@ -1,0 +1,28 @@
+@import "../../scss/_theme.scss";
+
+.page-select {
+  background: $c-greylight;
+  padding: $s-pad;
+
+  ul, li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+
+  li {
+    &:hover {
+      background: $c-grey;
+      color: $c-white;
+    }
+  }
+
+  .ng-hide {
+    font-size: 0px;
+  }
+
+  .ng-hide-add,
+  .ng-hide-remove {
+    transition: all 500ms;
+  }
+}
