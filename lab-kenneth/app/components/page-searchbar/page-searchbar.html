@@ -1,0 +1,14 @@
+<div class="page-searchbar">
+
+  <input class="search-input" ng-model="$ctrl.searchterm"
+    placeholder="Seach for title of article here">
+
+   <ul>
+    <li
+    ng-repeat="item in $ctrl.pages | pageSearchFilter: $ctrl.searchterm"
+    ng-click="$ctrl.handleSelect(item)">
+
+    {{item.title}}
+    </li>
+  </ul> 
+</div>

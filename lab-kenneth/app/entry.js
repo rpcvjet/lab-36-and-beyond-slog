@@ -15,6 +15,16 @@ angular.module('kenblog', [uiRouter, ngMarked, ngClipboard.name, 'ngTouch', 'ngA
   $urlRouterProvider.when('','/auth');
   let routes = [
     {
+      name:'home',
+      url:'/home',
+      template:'<home></home>',
+    },
+    {
+      name: 'homepage',
+      url: '/home/:id',
+      template:'<home></home>',
+    },
+    {
       name:'auth',
       url:'/auth',
       template:'<auth></auth>',
@@ -26,7 +36,6 @@ angular.module('kenblog', [uiRouter, ngMarked, ngClipboard.name, 'ngTouch', 'ngA
     },
   ];
   routes.forEach(route => $stateProvider.state(route));
-
 }]);
 
 require('./service/page-service.js');
@@ -34,9 +43,16 @@ require('./service/auth-service.js');
 
 
 require('./containers/auth/auth-container.js');
-require('./containers/dashboard/index.js');
+require('./containers/dashboard');
+require('./containers/home');
+
+require('./filter/nav-filter');
+require('./filter/page-search-filter');
+
 
 
 require('./components/login');
-require('./components/page-select');
+require('./components/navbar');
 require('./components/page-editor');
+require('./components/page-searchbar');
+require('./components/page-select');

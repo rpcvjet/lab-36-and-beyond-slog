@@ -23,8 +23,7 @@ require('angular').module('kenblog')
           $log.log('just made a page', page);
           this.pageSelectPages.push(page);
           this.pageEditorPage = {title: '', content: '', showInNav: false};
-        })
-        .catch($log.error);
+        });
       };
 
       this.handlePageNew = () =>{
