@@ -1,54 +1,55 @@
-401 JS --  Lab 32 crud
-===
+#Lab Kenneth 36
 
-## Submission Instructions
-  * Work in a fork of this repository
-  * Work in a branch on your fork
-  * Write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-duncan`
-  * Submit a pull request to this repository
-  * Submit a link to your pull request on canvas
-  * Submit a question, observation, and how long you spent on canvas  
-  
-## Learning Objectives  
-* Firebase Auth
+##Firebase vs Mongo Authentication
 
-## Resources  
-* [firebase admin sdk docs](https://firebase.google.com/docs/admin/setup)
-* [firebase sdk docs](https://firebase.google.com/docs/web/setup)
+In Firebase, there is no need for a signup authentication and then a login authentication.
+There is also no need to generate a hash for authentication such as we need to in Mongo.  
 
-## Requirements  
-#### Configuration  
-* **server/**
-* **server/lib**
-* **server/router**
-* **server/test**
-* **server/test/lib**
-* **server/index.js** -- inits and exports express app
-* **main.js** -- starts ther server/index.js
-* **package.json** 
-* **.gitignore** -- make sure you ignore the .env
-* **.env**
- 
-#### Feature Tasks  
-* Create a Project on Firebase
- * Enable `email/password` authorization
- * Add a user accoount
- * Set the database read permissions to true
-* create an .env file with all necessary private keys and info
-* create a server/index.js that exports your express app
-* create basic and bearer auth express middleware that use the firebase and firebase-admin sdks 
-* write test to login a a user
 
-####  Documentation  
-* Write how the working with firebase auth differs from using mongo
+##::before vs. ::after
 
-#### Testing  
-* test GET /api/login with status of 200 and 401
+*::after* is a pseudo element which allows you to insert content onto a page from CSS (without it needing to be in the HTML). While the end result is not actually in the DOM, it appears on the page as if it is
 
-## Rubric  
-* 2ps Configuration
-* 3pts Feature Tasks
-* 3pts Tests
-* 2pts Documentation
+*::before* is exactly the same only it inserts the content before any other content in the HTML instead of after.
 
-<!-- links --> 
+
+## static - relative - absolute  - fixed
+
+### Static
+HTML elements are positioned static by default.
+
+Static positioned elements are not affected by the top, bottom, left, and right properties.
+
+An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page.
+
+###Relative
+Relative elements are positioned relative to their normal position.
+
+Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+
+###Absolute
+Absoluete elements are positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+
+###Fixed
+Fixed elements are positioned relative to their viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+
+A fixed element does not leave a gap in the page where it would normally have been located.
+
+## inline - block - inline-block
+
+### Inline
+
+Inline elements:
+1. respect left & right margins and padding, but not top & bottom
+2. cannot have a width and height set
+3. allow other elements to sit to their left and right.
+
+###block
+1. respect all of those
+2. force a line break after the block element
+
+###Inline-block
+
+1. allow other elements to sit to their left and right
+2. respect top & bottom margins and padding
+3. respect height and width
